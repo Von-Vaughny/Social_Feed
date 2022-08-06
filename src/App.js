@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Post from './Components/Post/Post'
+
 
 function App() {
+
+  const [posts, setPosts] = useState([{name: 'Bugs Bunny', date: '11-07-2007', message: 'Eh, what’s up, doc?'}, {name: 
+    'Elmer Fudd', date: '', message: 'Be vewy vewy quiet, I’m hunting wabbits!, He-e-e-e-e!'}]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Social Feed</h3>
+      <Post parentPosts = {posts}></Post>
     </div>
   );
 }
