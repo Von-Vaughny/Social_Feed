@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CreatePost from './Components/CreatePost/CreatePost'
 import DisplayPost from './Components/DisplayPosts/DisplayPosts'
 
 
@@ -11,6 +12,7 @@ function App() {
     <div>
       <h3>Social Feed</h3>
       <div>
+        <CreatePost/>
         <DisplayPost posts = {posts}/>
       </div>
     </div>
