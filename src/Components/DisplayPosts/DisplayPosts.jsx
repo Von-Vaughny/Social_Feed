@@ -4,9 +4,9 @@ const DisplayPosts = (props) => {
     return (
         <table>
             <tbody>
-                {props.posts.map((post) => {
+                {props.parentPosts.map((post, index) => {
                     return (
-                        <tr>
+                        <tr key={index}>
                             <Post post = {post}/>
                         </tr>
                     );
@@ -16,4 +16,4 @@ const DisplayPosts = (props) => {
     );
 };
 
-export default DisplayPosts
+export default DisplayPosts;
