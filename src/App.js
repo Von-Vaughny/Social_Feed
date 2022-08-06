@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Post from './Components/Post/Post'
+import DisplayPost from './Components/DisplayPosts/DisplayPosts'
 
 
 function App() {
@@ -8,9 +8,11 @@ function App() {
     'Elmer Fudd', date: '', message: 'Be vewy vewy quiet, I’m hunting wabbits!, He-e-e-e-e!'}]);
 
   return (
-    <div className="App">
+    <div>
       <h3>Social Feed</h3>
-      <Post parentPosts = {posts}></Post>
+      <div>
+        <DisplayPost posts = {posts}/>
+      </div>
     </div>
   );
 }
