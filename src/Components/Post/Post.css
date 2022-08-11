@@ -2,6 +2,32 @@
     color: green;
 }
 
-.dislikeActive{
+.dislikeActive {
     color: red;
+}
+
+button {
+    background-color: white;
+    border: white;
+    color: gray;
+    margin-bottom: 0.25cm;
+    font-size: large;
+}
+
+.header {
+    display: inline-block;
+}
+
+.header::before {
+    content: '\a0';
+} 
+
+.right {
+    text-align: right;
+}
+
+.post {
+    margin: 0px;
+    border-bottom: 0.5mm solid black;
+    width: 1000px;
 }

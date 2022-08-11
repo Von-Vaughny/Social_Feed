@@ -18,11 +18,15 @@ const CreatePost = (props) => {
 
     return (
         <form onSubmit={handleEvent}>
-            <label>Name</label>
-            <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
-            <label>Post</label>
-            <input type='text' value={message} onChange={(event) => setMessage(event.target.value)}/>
-            <button type='submit'>Post</button>
+            <div className='form-name'>
+                <label>Name </label>
+                <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
+            </div>
+            <div className='form-post'> 
+                <label>Post </label>
+                <textarea type='text' rows="3" cols="100" value={message} onChange={(event) => setMessage(event.target.value)}/>
+                <button type='submit'>Post</button>
+            </div> 
         </form>
     );
 }

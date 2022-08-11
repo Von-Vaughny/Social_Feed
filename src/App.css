@@ -1,0 +1,26 @@
+html {
+    background-image: linear-gradient(to bottom right, purple, blue);
+}
+
+.border-box {
+    border: 1px;
+    border-style: solid;
+    border-radius: 1ch;
+    border-color: gray;
+    margin: 1em;
+    margin-right: 20em;
+    margin-left: 20em;
+    padding: 1em;
+    background-color: white;
+    
+}
+
+
+
+.nav-bar {
+    border: 1px;
+    border-style: hidden;
+    padding: 1em;
+    text-align: center;
+    background-clip: border-box;
+}

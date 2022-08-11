@@ -24,13 +24,15 @@ const Post = (props) => {
 
     return (
         <td>
-            <div>
-                {props.index+1}
-                <h4>{props.post.name}</h4>
-                <p1>{props.post.date}</p1>
-                <p>{props.post.message}</p>
-                <button className={[likeStatus ? 'likeActive': '']} onClick={toggleLikeStatus}><FaThumbsUp/></button>
-                <button className={[dislikeStatus ? 'dislikeActive': '']} onClick={toggleDislikeStatus}><FaThumbsDown/></button>
+            <div className="post">
+                <div id="name" className="header"><h4>{props.post.name}</h4></div>
+                <div id="date" className="header"> ({props.post.date})</div>
+                <div className="width"><p>{props.post.message}</p></div>
+                <div className="right">
+                    <button className={[likeStatus ? 'likeActive': 'likeInactive']} onClick={toggleLikeStatus}><FaThumbsUp/></button>
+                    <button className={[dislikeStatus ? 'dislikeActive': 'dislikeInactive']} onClick={toggleDislikeStatus}><FaThumbsDown/></button>
+                </div>
+                
             </div>
         </td>
     );
